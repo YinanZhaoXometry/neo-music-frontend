@@ -23,6 +23,41 @@ module.exports = {
           '/api': ''
         },
         changeOrigin: true // 是否是跨域请求.
+      },
+      '/api/getSearchByKey': {
+        target: 'http://localhost:3200/',
+        pathRewrite: {
+          '/api': ''
+        },
+        changeOrigin: true // 是否是跨域请求.
+      },
+      '/api/getLyric': {
+        target: 'http://localhost:3200/',
+        pathRewrite: {
+          '/api': ''
+        },
+        changeOrigin: true // 是否是跨域请求.
+      },
+      '/api/getRecommend': {
+        target: 'http://localhost:3200/',
+        pathRewrite: {
+          '/api': ''
+        },
+        changeOrigin: true // 是否是跨域请求.
+      },
+      '/api/getRecommendPlaylists': {
+        target: 'http://localhost:3200/',
+        pathRewrite: {
+          '/api': ''
+        },
+        changeOrigin: true // 是否是跨域请求.
+      },
+      '/api/getSongListDetail': {
+        target: 'http://localhost:3200/',
+        pathRewrite: {
+          '/api': ''
+        },
+        changeOrigin: true // 是否是跨域请求.
       }
     },
 

@@ -175,9 +175,11 @@ export default {
       display: block;
       padding: 5px;
       font-size: $font-size-large-x;
-      color: $color-theme;
       font-weight: bold;
       border-radius: 50%;
+      background: $color-theme-d;
+      border: 1px solid $color-theme;
+      color: $color-text-ll;
     }
   }
 

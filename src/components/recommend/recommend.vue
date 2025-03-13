@@ -7,7 +7,7 @@
             <slider ref="slider">
               <div v-for="(item, index) in recommends" v-bind:key="index">
                 <a :href="item.linkUrl">
-                  <img @load="loadImage" :src="item.picUrl" />
+                  <img @load="loadImage" :src="item.pic_info.url" />
                 </a>
               </div>
             </slider>
@@ -60,7 +60,6 @@ export default {
   },
   created() {
     this._getRecommend()
-
     this._getDiscList()
   },
   activated() {
@@ -92,7 +91,7 @@ export default {
     _getRecommend() {
       getRecommend().then((res) => {
         if (res.code === ERR_OK) {
-          this.recommends = res.data.slider
+          this.recommends = res.focus.data.content
         }
       })
     },

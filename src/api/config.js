@@ -12,3 +12,14 @@ export const options = {
 }
 
 export const ERR_OK = 0
+
+export const isDebug = process.env.NODE_ENV !== 'production'
+
+export function makeAPIEndpoint(path) {
+  const baseURL = isDebug
+    ? 'http://localhost:3000/api'
+    : 'http://localhost:3200'
+  const shouldPrependSlash = !path.startsWith('/')
+
+  return `${baseURL}${shouldPrependSlash ? '/' : ''}${path}`
+}

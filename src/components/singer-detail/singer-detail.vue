@@ -35,10 +35,8 @@ export default {
         return
       }
       getSingerDetail(this.singer.id).then((res) => {
-        console.log('res: ', res)
         processSongsUrl(this._normalizeSongs(res.singer.data.songlist)).then(
           (songs) => {
-            console.log('songs: ', songs)
             this.songs = songs.filter((song) => Boolean(song.url))
           }
         )
@@ -46,8 +44,6 @@ export default {
     },
     _normalizeSongs(list) {
       let ret = []
-      console.log('list: ', list)
-
       const isValidMusic = (data) =>
         data.ksong.id &&
         data.album.mid &&

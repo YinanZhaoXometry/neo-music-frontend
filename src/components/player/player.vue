@@ -51,6 +51,7 @@
                   class="text"
                   :class="{ current: currentLineNum === index }"
                   v-for="(line, index) in currentLyric.lines"
+                  :key="index"
                 >
                   {{ line.txt }}
                 </p>
@@ -522,7 +523,6 @@ export default {
   },
   watch: {
     currentSong(newSong, oldSong) {
-      console.log('newSong: ', newSong)
       if (!newSong.id || !newSong.url || newSong.id === oldSong.id) {
         return
       }

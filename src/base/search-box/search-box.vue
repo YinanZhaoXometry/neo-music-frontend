@@ -1,5 +1,5 @@
 <template>
-  <div class="search-box">
+  <div class="search-box" @click="focus">
     <i class="icon-search"></i>
     <input ref="query" v-model="query" class="box" :placeholder="placeholder" />
     <i @click="clear" v-show="query" class="icon-dismiss"></i>
@@ -27,6 +27,9 @@ export default {
     },
     setQuery(query) {
       this.query = query
+    },
+    focus() {
+      this.$refs.query.focus()
     },
     blur() {
       this.$refs.query.blur()
@@ -77,7 +80,7 @@ export default {
 
   .icon-dismiss {
     font-size: 16px;
-    color: $color-background;
+    color: $color-text-l;
   }
 }
 </style>
