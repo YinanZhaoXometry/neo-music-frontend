@@ -1,9 +1,8 @@
 {
-  "name": "music-player",
+  "name": "neo-music-player-frontend",
   "version": "1.0.0",
-  "description": "Music Player",
-  "author": "Zhao Yinan",
-  "private": true,
+  "description": "Neo Music Player",
+  "author": "Yinan Zhao",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",

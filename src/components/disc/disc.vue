@@ -31,17 +31,14 @@ export default {
   },
   methods: {
     _getSongList() {
-      console.log('this.disc: ', this.disc)
       if (!this.disc.dissid) {
         this.$router.push('/recommend')
         return
       }
       getSongList(this.disc.dissid).then((res) => {
-        console.log('res: ', res)
         if (res.code === ERR_OK) {
           processSongsUrl(this._normalizeSongs(res.cdlist[0].songlist)).then(
             (songs) => {
-              console.log('songs: ', songs)
               this.songs = songs.filter((song) => Boolean(song.url))
             }
           )
