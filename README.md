@@ -8,10 +8,10 @@ https://github.com/YinanZhaoXometry/neo-music-backend
 
 ## Project Features
 
-- 💻 Modern user interface design
-- ⚡ Fast loading speeds and responsive design
-- 🪄 Light/Dark mode and smooth animation and transitions
-- 💾 Utilized serverless backend services such as Snity and Upstash
+- 💾 Centralized state management with Vuex
+- ⚡ smooth animation enhancing user experience with transitions
+- 🏎️ Touch scroll performance optimized with better-scrolld
+- 🪄 Image lazily loaded with vue-lazyload
 
 ## Tech Stack
 
@@ -20,18 +20,7 @@ https://github.com/YinanZhaoXometry/neo-music-backend
 - **Vue.js**: A progressive JavaScript framework
 - **Vuex**: A state management library for Vue.js
 - **vue-lazyload**: A Vue.js directive optimizes performance by lazily loading images as needed
-- **better-scroll**: A JavaScript library that enhances mobile scrolling with smooth, touch-friendly performance.
-
-### Backend
-
-- **Next.js API Routes**: Server-side API implementation
-- **Upstash**: Serverless data platform, offering low-latency, scalable databases like Redis
-
-### Deployment and Infrastructure
-
-- **Vercel**: Application hosting and automated deployment
-- **Sanity**: Content management system
-- **Upstash**: Track total visits and article view statistics.
+- **better-scroll**: A touch-friendly JavaScript library that enhances mobile scrolling with smooth performance
 
 ## Local Development
 
